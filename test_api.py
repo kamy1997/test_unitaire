@@ -1,10 +1,9 @@
-from unicodedata import name
+
 import unittest
 import requests
 class TestApi(unittest.TestCase):
     URL="http://127.0.0.1:5000/api"
-    data={"name":"testing",
-    "descripton":"testing post"}
+    
 
     def test_1_get_all(self):
         resp = requests.get(self.URL)
