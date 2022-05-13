@@ -6,10 +6,9 @@ class TestApi(unittest.TestCase):
     "descripton":"testing post"}
 
     def test_1_get_all(self):
-        resp = requests.get('http://localhost:5000/api/')
-        resp.status_code
+        resp = requests.get(self.URL)
         self.assertEqual(resp.status_code, 200)
-       
+        self.assertEqual(len(resp.json()), 1)
         print ("Test one is completed")
 
     def test_2_post(self):
